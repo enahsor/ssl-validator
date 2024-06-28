@@ -4,7 +4,7 @@ export const MinimumCertificateAgeDaysSchema = z.number().int().positive();
 export const URLSchema = z.string().url();
 export const URLsSchema = z.array(URLSchema);
 export const URLsFilePathSchema = z.string();
-export const SMTPServerSchema = z.string().url();
+export const SMTPServerSchema = z.string();
 export const SMTPUsernameSchema = z.string().email();
 export const SMTPPasswordSchema = z.string();
 
