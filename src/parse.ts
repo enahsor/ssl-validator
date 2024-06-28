@@ -59,12 +59,15 @@ export default async function parse(args: Record<string, any>) {
   const smtpPassword = getValue(SMTPPasswordSchema, "smtpPassword", args);
   const smtpPort = getValue(z.number(), "smtpPort", args);
 
+  const sendTo = getValue(z.string().email(), "sendTo", args);
+
   return {
     minimumCertificateAgeDays,
     urlsFilePath,
     smtpHost,
     smtpUsername,
     smtpPassword,
-    smtpPort
+    smtpPort,
+    sendTo
   };
 }

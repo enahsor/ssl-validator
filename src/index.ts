@@ -49,7 +49,7 @@ async function main() {
           },
           mailOptions: {
             from: args.smtpUsername,
-            to: args.smtpUsername
+            to: args.sendTo!
           }
         }).catch((error) => {
           console.error(`Error sending email for ${url}: ${error.message}`);
